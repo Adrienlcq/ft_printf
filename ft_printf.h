@@ -6,7 +6,7 @@
 /*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:05:04 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/25 22:36:53 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:14:49 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 typedef struct s_data
 {
 	int		ret;
-	//long	nb;
-	//char	buff[5000];
 	va_list	args;
 }				t_data;
 

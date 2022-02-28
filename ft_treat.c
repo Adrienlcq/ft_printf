@@ -6,7 +6,7 @@
 /*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:33:24 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/25 22:37:27 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:10:59 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_treat_percentage(char c)
 {
 	write(1, &c, 1);
-	return(1);
+	return (1);
 }
 
 /* treat s */

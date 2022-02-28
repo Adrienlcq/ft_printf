@@ -6,7 +6,7 @@
 /*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:40:37 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/25 22:31:02 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:13:46 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 void	init(t_data *data)
 {
 	data->ret = 0;
-	//data->nb = 0;
-	//bzero(data->buff, 5000);
 }
 
 void	ft_type(t_data *data, char c)
 {
 	if (c == 'p')
-		data->ret += ft_treat_ptr(va_arg(data->args, unsigned long int), "0123456789abcdef");
+		data->ret += ft_treat_ptr(va_arg(data->args, unsigned long int),
+				"0123456789abcdef");
 	if (c == 'd' || c == 'i')
 		data->ret += ft_putnbr(va_arg(data->args, int));
 	if (c == 'c')
@@ -32,9 +31,11 @@ void	ft_type(t_data *data, char c)
 	if (c == 's')
 		data->ret += ft_treat_s(data);
 	if (c == 'x')
-		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int), "0123456789abcdef");
+		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int),
+				"0123456789abcdef");
 	if (c == 'X')
-		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int), "0123456789ABCDEF");
+		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int),
+				"0123456789ABCDEF");
 	if (c == '%')
 		data->ret += ft_treat_percentage('%');
 }

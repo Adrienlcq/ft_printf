@@ -6,7 +6,7 @@
 /*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:22:54 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/25 22:29:26 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:14:03 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_uputnbr(unsigned int n)
 	return (i);
 }
 
-/* other */
+/* utils */
 int	hexa_len(unsigned int nbr)
 {
 	int	len;
