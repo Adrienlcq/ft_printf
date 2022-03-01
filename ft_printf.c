@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:40:37 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/28 14:13:46 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/03/01 20:04:08 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/* init struct */
 void	init(t_data *data)
 {
 	data->ret = 0;

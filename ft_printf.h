@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:05:04 by adlecler          #+#    #+#             */
-/*   Updated: 2022/02/28 14:14:49 by adlecler         ###   ########.fr       */
+/*   Updated: 2022/03/01 19:58:20 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,16 @@ void	ft_type(t_data *data, char c);
 int		is_ok(char c);
 
 /* treat cspdiuxX% */
-int		ft_treat_s(t_data *data);
-int		ft_treat_x(t_data *data, char c);
 int		ft_treat_percentage(char c);
-int		ft_treat_ptr(unsigned long n, char *hex);
 int		ft_putchar(char c);
+int		ft_treat_s(t_data *data);
 int		ft_putnbr(int n);
 int		ft_uputnbr(unsigned int n);
+int		ft_hex_putnbr(unsigned int n, char *hexa);
+int		ft_treat_ptr(unsigned long n, char *hex);
+int		ft_point_print(unsigned long n, char *hex);
 
 /* utils */
 int		ft_strlen(char *str);
-int		ft_hex_putnbr(unsigned int n, char *hexa);
-int		ft_point_print(unsigned long n, char *hex);
 
 #endif
