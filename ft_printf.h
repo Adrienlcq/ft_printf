@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:05:04 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 19:58:20 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/01 20:07:22 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		is_ok(char c);
 /* treat cspdiuxX% */
 int		ft_treat_percentage(char c);
 int		ft_putchar(char c);
-int		ft_treat_s(t_data *data);
+int		ft_treat_s(char *str);
 int		ft_putnbr(int n);
 int		ft_uputnbr(unsigned int n);
 int		ft_hex_putnbr(unsigned int n, char *hexa);

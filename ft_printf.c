@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:40:37 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:04:08 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/01 20:06:24 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_type(t_data *data, char c)
 	if (c == 'u')
 		data->ret += ft_uputnbr(va_arg(data->args, int));
 	if (c == 's')
-		data->ret += ft_treat_s(data);
+		data->ret += ft_treat_s(va_arg(data->args, char*));
 	if (c == 'x')
 		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int),
 				"0123456789abcdef");

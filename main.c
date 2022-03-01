@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 16:47:23 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:05:07 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/01 20:10:29 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int ac, char **av)
 	printf("Retour attendu: %d\n", printf("Ceci est une string (s) : %s\n", NULL));
 	ft_printf("Mon retour: %d\n", ft_printf("Ceci est une string (s) : %s\n", "Hello World!"));
 	printf("Retour attendu: %d\n", printf("Ceci est une string (s) : %s\n", "Hello World!"));
+	ft_printf("Mon retour: %d\n", ft_printf("Ceci est une string (s) : %s\n", ""));
+	printf("Retour attendu: %d\n", printf("Ceci est une string (s) : %s\n", ""));
 	ft_printf("Mon retour: %d\n", ft_printf("Ceci est un hexa (X) : %X\n", 42));
 	printf("Retour attendu: %d\n", printf("Ceci est un hexa (X) : %X\n", 42));
 	ft_printf("Mon retour: %d\n", ft_printf("Ceci est un hexa (x) : %x\n", 160));

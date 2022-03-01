@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:22:54 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:04:20 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/01 20:06:44 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ int	ft_putchar(char c)
 }
 
 /* treat s */
-int	ft_treat_s(t_data *data)
+int	ft_treat_s(char *str)
 {
-	char	*str;
-
-	str = va_arg(data->args, char *);
 	if (!str)
 	{
 		write(1, "(null)", 6);
