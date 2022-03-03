@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 16:47:23 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:10:29 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/03 15:13:20 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,13 @@ int	main(int ac, char **av)
 	printf("Retour attendu: %d\n", printf("Ceci est un unsigned int (u) : %u\n", 4294967295 + 2));
 	ft_printf("Mon retour: %d\n", ft_printf("Ceci est une adresse (p) : %p\n", &test));
 	printf("Retour attendu: %d\n", printf("Ceci est une adresse (p) : %p\n", &test));
-	ft_printf("Mon retour: %d\n", ft_printf("C'est de la merde : %c%s%%%p\n", 'c', "coucou", "42"));
-	printf("Retour attendu: %d\n", printf("C'est de la merde : %c%s%%%p\n", 'c', "coucou", "42"));
-	ft_printf("ft_printf: %d\n", ft_printf("Test 2 : \" %%%% \" \nYour return :"));
-	printf("printf: %d\n", printf("Test 2 : \" %%%% \" \nYour return :"));
+	ft_printf("Mon retour: %d\n", ft_printf("C'est d%ie la m%%rde : %c%s%%%p\n", 6523, 'c', "coucou", "42"));
+	printf("Retour attendu: %d\n", printf("C'est d%ie la m%%rde : %c%s%%%p\n", 6523, 'c', "coucou", "42"));
+	ft_printf("Mon retour: %d\n", ft_printf("Test pourcentages : \" %%%% \" \n"));
+	printf("Retour attendu: %d\n", printf("Test pourcentages : \" %%%% \" \n"));
+	ft_printf("Mon retour: %d\n", ft_printf("Test nimp : %d%k5%u%k\n", 42, 56));
+	printf("Retour attendu: %d\n", printf("Test nimp : %d%k5%u%k\n", 42, 56));
+	ft_printf("Mon retour: %d\n", ft_printf("2 adresses (p) : %p %p\n", 0, 666));
+	printf("Retour attendu: %d\n", printf("2 adresses (p) : %p %p\n", 0, 666));
 	return (0);
 }

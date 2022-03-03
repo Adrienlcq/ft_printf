@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:40:37 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:06:24 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/03 14:59:15 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/* init struct */
-void	init(t_data *data)
-{
-	data->ret = 0;
-}
 
 void	ft_type(t_data *data, char c)
 {
@@ -30,7 +24,7 @@ void	ft_type(t_data *data, char c)
 	if (c == 'u')
 		data->ret += ft_uputnbr(va_arg(data->args, int));
 	if (c == 's')
-		data->ret += ft_treat_s(va_arg(data->args, char*));
+		data->ret += ft_treat_s(va_arg(data->args, char *));
 	if (c == 'x')
 		data->ret += ft_hex_putnbr(va_arg(data->args, unsigned int),
 				"0123456789abcdef");
@@ -47,28 +41,32 @@ int	is_ok(char c)
 		|| c == 'd' || c == 'i' || c == 'u' || c == 'p');
 }
 
+void	ft_write_with_increment(t_data *data, char c)
+{
+	ft_putchar(c);
+	data->ret++;
+}
+
 int	ft_printf(const char *format, ...)
 {
 	t_data	data;
 	int		i;
 
 	i = 0;
+	data.ret = 0;
 	va_start(data.args, format);
-	init(&data);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			while (!is_ok(format[i]))
-				i++;
-			ft_type(&data, format[i]);
+			if (is_ok(format[i]))
+				ft_type(&data, format[i]);
+			else
+				ft_write_with_increment(&data, format[i]);
 		}
 		else
-		{
-			write(1, &format[i], 1);
-			data.ret++;
-		}
+			ft_write_with_increment(&data, format[i]);
 		i++;
 	}
 	va_end(data.args);

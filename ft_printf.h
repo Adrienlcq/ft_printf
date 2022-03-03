@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
+/*   By: adlecler <adlecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 14:05:04 by adlecler          #+#    #+#             */
-/*   Updated: 2022/03/01 20:07:22 by adrien           ###   ########.fr       */
+/*   Updated: 2022/03/03 15:10:49 by adlecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_data
 
 /* corps ft_printf */
 int		ft_printf(const char *format, ...);
+void	ft_write_with_increment(t_data *data, char c);
 void	ft_type(t_data *data, char c);
 int		is_ok(char c);
 
